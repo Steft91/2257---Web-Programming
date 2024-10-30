@@ -1,0 +1,21 @@
+body{
+    background-color: black;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+h1 {
+    font-family: fantasy;
+    font-size: 20px;
+    color: rgb(151, 190, 112);
+}
+
+h2 {
+    font-size: 18px;
+    color: rgb(114, 37, 41);
+}
+
+strong {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: brown;
+}
