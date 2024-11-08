@@ -2,7 +2,7 @@ body{
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     font-family: 'Times New Roman', Times, serif;
-    margin: 20px 75px;
+    margin: 50px 100px;
     line-height: 1.8;
 }
 
@@ -10,21 +10,41 @@ h1 {
     font-size: 28px;
     color: rgb(112, 124, 233);
     font-family: 'Times New Roman', Times, serif;
-    font-style: oblique;
+}
+
+h2 {
+    font-size: 22px;
+    color: rgb(156, 165, 248);
+
 }
 
 p {
-    font-size: 18px;
-    line-height: 1.8;
+    font-size: 15px;
+}
+
+ul.centrar {
+    display: inline-block;
+    text-align: left;
+    margin: 0 auto;
+
 }
 
 .centrar {
     display: block; 
     margin-left: auto;
     margin-right: auto; 
+    text-align: center;
 }
 
-.foto {
-    border-radius: 35px;
+footer {
+    font-family:'Times New Roman', Times, serif;
+    color: rgb(46, 46, 46);
+    text-align: center;
+    background-color: blanchedalmond;
 }
+
+#redes {
+    text-align: left;
+}
+
 
