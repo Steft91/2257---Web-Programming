@@ -47,4 +47,21 @@ footer {
     text-align: left;
 }
 
+.clasespan {
+    color: blueviolet;
+    font-family: monospace;
+}
 
+strong {
+    color: rgb(109, 199, 235);
+}
+
+.boton {
+    color: rgb(172, 158, 141);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: antiquewhite;
+}
