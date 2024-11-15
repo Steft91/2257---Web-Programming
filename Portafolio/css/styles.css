@@ -86,10 +86,15 @@ nav {
 
 nav a:hover {
     background-color: rgb(143, 173, 196);
-    color: rgb(53, 64, 88);
+    color: rgb(70, 77, 88);
 }
 
-button a{
+nav a:visited{
+    color: #2a303d;
+    text-decoration: none;
+}
+
+button {
     color: #768cbb;
     font-family: 'Times New Roman', Times, serif;
     font-size: larger;
@@ -100,6 +105,13 @@ button a{
     background-color: #b7c9f1;
     text-decoration: none;
 }
+
+button:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    color: #768cbb;
+}
+
 
 button a:hover{
     color: #8fa4d1;
@@ -145,4 +157,33 @@ figcaption {
 img {
     border-radius: 10px;
     max-width: 100%;
+}
+
+.sCombinado h6 {
+    color: rgb(125, 151, 182);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 18px;
+}
+
+.flexStyle {
+    display: flex;
+    border: 5px dashed rgb(167, 117, 167);
+    /*  ancho/estilo/color   */
+    justify-content: space-around;
+    
+}
+
+form{
+    width: 50%;
+    margin: 20px auto;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+
+label {
+    display:inline-block;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    text-align: right;
 }
