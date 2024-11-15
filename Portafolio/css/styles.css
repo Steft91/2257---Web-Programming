@@ -15,6 +15,7 @@ h1 {
 h2 {
     font-size: 22px;
     color: rgb(156, 165, 248);
+    text-align: center;
 
 }
 
@@ -31,20 +32,19 @@ ul.centrar {
 
 .centrar {
     display: block; 
-    margin-left: auto;
-    margin-right: auto; 
+    margin: 0 auto;
     text-align: center;
 }
 
-footer {
+footer{
+    text-align: center;
+}
+
+#footer1 {
     font-family:'Times New Roman', Times, serif;
     color: rgb(46, 46, 46);
     text-align: center;
     background-color: blanchedalmond;
-}
-
-#redes {
-    text-align: left;
 }
 
 .clasespan {
@@ -52,16 +52,97 @@ footer {
     font-family: monospace;
 }
 
-strong {
-    color: rgb(109, 199, 235);
+.spanH {
+    color: #628eac;
+    font-family: monospace;
 }
 
-.boton {
-    color: rgb(172, 158, 141);
+strong {
+    color: rgb(77, 125, 145);
+}
+
+a {
+    color: #957eb4;
+    cursor: pointer;
+}
+
+a:hover{
+    color: #af8bdd;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+ul{
+    list-style-type: circle;
+    padding-left: 0;
+}
+
+nav {
+    color: black;
+    background-color:rgb(166, 197, 221);
+    padding:0%;
+    width: 300px;
+    text-align: center;
+}
+
+nav a:hover {
+    background-color: rgb(143, 173, 196);
+    color: rgb(53, 64, 88);
+}
+
+button a{
+    color: #768cbb;
     font-family: 'Times New Roman', Times, serif;
     font-size: larger;
     font-weight: bold;
     border-radius: 5px;
+    border-color: #414d66;
     cursor: pointer;
-    background-color: antiquewhite;
+    background-color: #b7c9f1;
+    text-decoration: none;
+}
+
+button a:hover{
+    color: #8fa4d1;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: none;
+}
+
+button a:visited{
+    color: #414d66;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+}
+
+.content {
+    flex: 1 1 70%;
+    padding: 10px;
+    box-sizing: border-box;
+    min-width: 300px;
+}
+.sidebar {
+    flex: 1 1 20%;
+    background-color: #c1d3fe;
+    padding: 5px;
+    box-sizing: border-box;
+    min-width: 200px;
+}
+
+#bodyHarry{
+    background-color: #edf2fb;
+}
+
+figcaption {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 10px;
+    font-style: oblique;
+    text-align: center;
+}
+
+img {
+    border-radius: 10px;
+    max-width: 100%;
 }
