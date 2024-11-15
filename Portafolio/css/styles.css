@@ -119,6 +119,12 @@ button a:hover{
     text-decoration: none;
 }
 
+.ctnvier
+{
+    display: flex;
+    flex-direction: column;
+}
+
 button a:visited{
     color: #414d66;
     text-decoration: none;
