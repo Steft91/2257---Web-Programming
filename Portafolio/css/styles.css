@@ -193,3 +193,28 @@ label {
     margin-right: 10px;
     text-align: right;
 }
+
+.bodyTable{
+    background-color: rgb(195, 210, 233);
+}
+
+.tableStyle{
+    text-align: center;
+    border-style: double;
+    border-color: #957eb4;
+    /* margin: 0 auto */
+}
+
+.tablaCenter{
+    display: flex;
+    justify-content: center;
+}
+
+th{
+    border: 3px dashed cornflowerblue;
+    background-color: #8fa4d1;
+}
+/*
+tr{
+    background-color: #af8bdd;
+} */

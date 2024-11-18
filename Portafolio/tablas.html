@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas</title>
+    <link rel="stylesheet" href="css/stylebg.css">
+
+</head>
+<body class="bodyTable">
+    <header>
+        <center>
+            <h1>Tablas</h1>
+        </center>
+    </header>
+    <section>
+        <p class="centrar">Uso de la etiqueta <em>table</em> para el <i>manejo de envio</i> o recibo de información</p>
+        <article class="tablaCenter">
+            <table frame="void" rules="row" class="tableStyle" border="2px" cellpadding="10px" cellspacing="0px">
+                <caption align="top" style="color: rgb(127, 78, 146);">Listado de Personas</caption>
+                <colgroup>
+                    <col style="width: 500; background-color: rgb(155, 132, 177);">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th width="200px">Nombre</th>
+                        <th width="200px">Apellido</th>
+                        <th>Edad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <tr>
+                            <td>Stefany</td>
+                            <td>Díaz</td>
+                            <td>19</td>
+                        </tr>
+                        <tr>
+                            <td>Andrés</td>
+                            <td>Álvarez</td>
+                            <td>20</td>
+                        </tr>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <td colspan="3" style="background-color: rgb(129, 129, 221);">Total</td>
+                </tfoot>
+                
+            </table><br>
+        </article>
+
+        <section>
+            <form action="submit" method="post">
+                <label>Nombre</label><br><input type="text" id="nombre" placeholder="Ingrese su nombre">
+                <br>
+                <label>Apellido</label><br><input type="text" id="apellido" placeholder="Ingrese su apellido">
+                <br>
+                <label>Password</label><br><input type="password" id="password" placeholder="Ingrese su contraseña">
+                <br>
+
+                <label>Tipo de persona</label><br><select name="cbTipo" id="formSelect">
+                    <option value="est">Estudiante</option>
+                    <option value="doce">Docente</option>
+                    <option value="admin">Administrativo</option>
+                </select>
+
+                <input type="submit">
+            </form>
+        </section>
+    </section>
+    
+</body>
+</html>

@@ -1,0 +1,41 @@
+body {
+    background: rgb(238,174,202);
+    background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+input[type="text"]{
+    background-color: transparent;
+    border-bottom: 5px solid rgb(187, 139, 171);
+    border-radius: 0px;
+    color: aquamarine;
+}
+
+input[placeholder]{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: oblique;
+    font-size: 13px;
+}
+
+input[type="text"]::placeholder{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(106, 75, 134);
+    font-style: italic;
+    font-size: 13px;
+}
+
+/* input[placeholder="Ingrese su apellido"]{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: oblique;
+} */
+
+input{
+    border-radius: 10px;
+    border: 0px;
+    outline: none;
+}
+
+input[type="submit"]{
+    background: rgb(138, 86, 143);
+    width: 100px;
+    cursor: pointer;
+}
