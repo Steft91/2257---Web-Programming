@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styleT.css">
+    <link rel="stylesheet" href="css/styleTabla.css">
+    <title>Tabla</title>
+</head>
+<body>
+    <header>
+        <h2>Inventario de productos</h2>
+        <nav class="centrar">
+            Home | <a href="tienda.html"> Ropa </a>
+            | <a href="tienda.html"> Tecnología </a> 
+            |<a href="tienda.html">Zapatos</a>
+        </nav>
+    </header>
+
+    <section>
+        <h3>Tabla de inventario</h3>
+        <table  rules="row" class="tableStyle" border="2px" cellpadding="10px" cellspacing="0px" >
+            <caption align="top" style="color: rgb(33, 99, 55);">Inventario Actualizado</caption>
+            <colgroup>
+                <col style="width: 500; ">
+            </colgroup>
+            <thead>
+                <tr style="color: white;">
+                    <th width="200px">PRODUCTO</th>
+                    <th width="200px">CATEGORÍA</th>
+                    <th width="200px">PRECIO</th>
+                    <th width="200px">STOCK</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <tr>
+                        <td>Camisa</td>
+                        <td>Ropa</td>
+                        <td>30$</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>Pantalon</td>
+                        <td>Ropa</td>
+                        <td>20$</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>Telefono</td>
+                        <td>Tecnologia</td>
+                        <td>300$</td>
+                        <td>10</td>
+                    </tr>
+                </tr>
+            </tbody>
+            <tfoot>
+                <td colspan="3" style="background-color: rgb(109, 180, 81);">Total</td>
+                <td>30</td>
+            </tfoot>
+            
+        </table><br>
+    </section>
+    
+</body>
+</html>

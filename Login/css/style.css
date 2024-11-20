@@ -1,0 +1,85 @@
+body{
+    background-image: url(https://plus.unsplash.com/premium_photo-1666863909125-3a01f038e71f?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGFpc2FqZSUyMGRlJTIwbW9udGElQzMlQjFhfGVufDB8fDB8fHww);
+    color: #fff;
+    margin: 50px 100px;
+    line-height: 1.8;
+}
+
+header{
+    background-color: #957eb4;
+}
+
+h1 {
+    font-size: 28px;
+    color: rgb(112, 124, 233);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h2 {
+    font-size: 22px;
+    color: rgb(156, 165, 248);
+    text-align: center;
+
+}
+
+p {
+    font-size: 15px;
+}
+
+ul.centrar {
+    display: inline-block;
+    text-align: left;
+    margin: 0 auto;
+
+}
+
+.centrar {
+    display: block; 
+    margin: 0 auto;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.content {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type="text"]{
+    background-color: transparent;
+    border-radius: 0px;
+    color: rgb(68, 78, 75);
+}
+
+input[type="password"]{
+    background-color: transparent;
+    border-radius: 0px;
+    color: rgb(68, 78, 75);
+}
+
+button {
+    color: #1b8d71;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+    font-weight: bold;
+    border-radius: 5px;
+    border-color: #5c6096;
+    cursor: pointer;
+    background-color: #65c4a4;
+    text-decoration: none;
+}
+
+input[placeholder]{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: oblique;
+    color: white;
+    font-size: 13px;
+}
