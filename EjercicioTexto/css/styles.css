@@ -1,0 +1,46 @@
+body, html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    border: 1px solid orange;
+    height: 500px;
+    width: 400px;
+}
+
+.container div {
+    height: 50px;
+}
+
+.item1 {
+    flex: 0 0 200px;
+    background-color: blueviolet;
+
+    /* Detalle de los atributos de la propiedad flex */
+    /*flex-grow: 1; Controla como crece el elemento según su espacio disponible */
+    /*flex-shrink: 1;  Controla como se encoge un elemento cuando falta el espacio */
+    /*flex-basis: 100px;  Define el tamaño inicial antes de q se adapte */
+} 
+
+.item2 {
+    flex: 2 2 200px;
+    background-color: aquamarine;
+}
+
+.item3 {
+    flex: 1 1 100px;
+    background-color: bisque;
+}
