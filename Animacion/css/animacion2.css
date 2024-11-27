@@ -1,0 +1,78 @@
+body, html {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: beige;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    height: 100%;
+    padding: 50px;
+}
+
+@keyframes moverBarra {
+    0% { transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(250px, 0px);
+    }
+
+    100%{
+        transform: translate(0, 0);
+    }
+    
+}
+
+@keyframes moverBola {
+    0% { transform: translate(150px, 0) rotate(90deg);
+    }
+
+    50% {
+        transform: translate(250px, 0px);
+    }
+
+    100%{
+        transform: translate(0, 0);
+    }
+    
+}
+
+.juego {
+    background-color: black;
+    width: 500px;
+    height: 300px;
+    justify-content: center;
+    position: relative;
+}
+
+.barraVerde {
+    position: absolute;
+    bottom: 10px;
+    animation-name: moverBarra;
+    left: 10px;
+    height: 30px;
+    width: 100px;
+    background-color: green;
+
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
+
+.bola {
+    background-color: red;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
+    animation-name: moverBola;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+
+}
