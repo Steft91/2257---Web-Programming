@@ -15,8 +15,6 @@ let estudiantes = [
 
 
 //Agregar nuevas calificaciones a los estudiantes.
-
-// Agregar calificaciones manualmente sin usar push
 estudiantes[0].calificaciones[estudiantes[0].calificaciones.length] = 20;
 estudiantes[0].calificaciones[estudiantes[0].calificaciones.length] = 14;
 
