@@ -16,16 +16,37 @@ let estudiantes = [
 
 //Agregar nuevas calificaciones a los estudiantes.
 
-estudiantes[0].calificaciones.push(20, 14); 
-estudiantes[1].calificaciones.push(18, 19); 
-estudiantes[2].calificaciones.push(10, 15); 
-estudiantes[3].calificaciones.push(15, 14); 
-estudiantes[4].calificaciones.push(18, 13); 
-estudiantes[5].calificaciones.push(19, 11); 
-estudiantes[6].calificaciones.push(17, 14); 
-estudiantes[7].calificaciones.push(18, 15); 
-estudiantes[8].calificaciones.push(10, 18);  
-estudiantes[9].calificaciones.push(16, 13); 
+// Agregar calificaciones manualmente sin usar push
+estudiantes[0].calificaciones[estudiantes[0].calificaciones.length] = 20;
+estudiantes[0].calificaciones[estudiantes[0].calificaciones.length] = 14;
+
+estudiantes[1].calificaciones[estudiantes[1].calificaciones.length] = 18;
+estudiantes[1].calificaciones[estudiantes[1].calificaciones.length] = 19;
+
+estudiantes[2].calificaciones[estudiantes[2].calificaciones.length] = 10;
+estudiantes[2].calificaciones[estudiantes[2].calificaciones.length] = 15;
+
+estudiantes[3].calificaciones[estudiantes[3].calificaciones.length] = 15;
+estudiantes[3].calificaciones[estudiantes[3].calificaciones.length] = 14;
+
+estudiantes[4].calificaciones[estudiantes[4].calificaciones.length] = 18;
+estudiantes[4].calificaciones[estudiantes[4].calificaciones.length] = 13;
+
+estudiantes[5].calificaciones[estudiantes[5].calificaciones.length] = 19;
+estudiantes[5].calificaciones[estudiantes[5].calificaciones.length] = 11;
+
+estudiantes[6].calificaciones[estudiantes[6].calificaciones.length] = 17;
+estudiantes[6].calificaciones[estudiantes[6].calificaciones.length] = 14;
+
+estudiantes[7].calificaciones[estudiantes[7].calificaciones.length] = 18;
+estudiantes[7].calificaciones[estudiantes[7].calificaciones.length] = 15;
+
+estudiantes[8].calificaciones[estudiantes[8].calificaciones.length] = 10;
+estudiantes[8].calificaciones[estudiantes[8].calificaciones.length] = 18;
+
+estudiantes[9].calificaciones[estudiantes[9].calificaciones.length] = 16;
+estudiantes[9].calificaciones[estudiantes[9].calificaciones.length] = 13;
+
 
 let mejorEstudiante = estudiantes[0]
 let peorEstudiante = estudiantes[0]
