@@ -1,5 +1,6 @@
-// Arreglos
-
+/****************************************************
+                      ARREGLOS
+*****************************************************/
 //Formas de declarar un arreglo
 
 const array = [1, 2, 3, 4, 5 ] //Forma más común
@@ -60,3 +61,62 @@ console.log({maximo})
 //Ventajas
 //son ideales para trabajar con transformaciones y manipulaciones complejas
 //Permiten un estilo de programación funcional más limpio y fácil de usar
+
+ /************************************************************/
+//Agregar nuevos elementos
+
+//push() agregar uno o más elementos al final del array
+
+let agregar = [1, 2, 3]
+agregar.push(4)
+console.log(agregar)
+
+let a = ['uno', 'dos', 'tres']
+a.push('cuarto')
+console.log(a)
+
+//unshift() agrega uno o más elementos al principio del array
+let add = [1, 2, 3]
+add.unshift(0) //agrega el 0 al principio del array
+console.log(add)
+
+//Splice() puede agregar o eliminar elementos de cualquier parte dentro del array
+//este método es muy versátil
+
+let z = [1, 2, 3]
+z.splice(1, 0, 4) //se va a agregar el 4, en la posición 1 y no se eliminará ningun elemento(0)
+console.log(z)
+
+//Modificar elementos dentro de un array
+
+//Se puede modificar los elementos directamente a través de su índice y modificarlo
+
+let m = [1, 2, 3]
+m[1] = 5
+console.log(m)
+
+//Si deseamo mjodificar el arreglo de forma inmutable, se puede utilizar el método map()
+//para crear un nuevo arreglo con los valores modificados
+
+let modificar = [1, 2, 3]
+let nuevoModificado = modificar.map(num => num === 3 ? 5 : num) //cambiar el 3 por el 5
+console.log(nuevoModificado)
+
+//Eliminar elementos dentro de un array
+
+// pop() elimina el último elemento del arreglo
+
+let e = [1, 2, 3]
+e.pop()
+console.log(e)
+
+//shift() elmina el primer elemento del arreglo
+
+let num = [1, 2, 3]
+num.shift()
+console.log(num)
+
+//splice() para eliminar elementos en cualquier posición
+let s = [1, 2, 3]
+s.splice(1, 1)
+console.log(s)
