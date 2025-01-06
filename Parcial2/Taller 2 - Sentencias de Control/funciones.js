@@ -65,9 +65,10 @@ console.log(operaciones.sumar?.(1, 2));
 console.log(operaciones.restar?.(3, 2)); //undefined
 
 
+/******************************************************/
 //Crea una función declarada llamada calcularPromedio, que reciba 3 números y calcule el promedio
 function calcularPromedio(a, b, c) {
-    if (!Number.isFinite(a) || !Number.isFinite(b) || !Number.isFinite(c)) {
+    if (!esNumero(a) || !esNumero(b) || !esNumero(c)) {
         throw new Error("Todos los parámetros deben ser números.");
     }
     return (a + b + c) / 3;
@@ -76,7 +77,7 @@ function calcularPromedio(a, b, c) {
 // Crear funcion determinarMayor, que reciba 2 numeros y retorne el mayor
 
 function determinarMayor(x, y) {
-    if (!Number.isFinite(x) || !Number.isFinite(y)) {
+    if (!esNumero(x) || !esNumero(y)) {
         throw new Error("Ambos parámetros deben ser números.");
     }
     return x > y ? x : y;
@@ -85,11 +86,12 @@ function determinarMayor(x, y) {
 //Crear funcion flecha llamada esPar que reciba número y retorne true si es par, false si es impar
 
 const esPar = (num) => {
-    if (!Number.isFinite(num)) {
+    if (!esNumero(num)) {
         throw new Error("El parámetro debe ser un número.");
     }
     return num % 2 === 0;
 }; 
+
 
 //Funcion anónima autoejecutable que 
 // llame a las funciones anteriores, usea vlores de ejem, y muestre resultado en consola
@@ -97,12 +99,12 @@ const esPar = (num) => {
 (function () {
     try {
         const a = 14, b = 16, c = 15;
-        const num1 = 9, num2 = 4;
+        const num1 = 7, num2 = 14;
         
         console.log(" El Promedio es:", calcularPromedio(a, b, c));
-        console.log("Mayor entre", num1, "y", num2, ":", determinarMayor(num1, num2));
-        console.log("¿Es", num1, "par?:", esPar(num1));
-        console.log("¿Es", num2, "par?:", esPar(num2));
+        console.log("El número mayor entre", num1, "y", num2, "es", determinarMayor(num1, num2));
+        console.log("Es", num1, "par =>", esPar(num1));
+        console.log("Es", num2, "par =>", esPar(num2));
     } catch (error) {
         console.error("Error:", error.message);
     }
@@ -110,3 +112,6 @@ const esPar = (num) => {
 
 //Con validaciones y si algun parametro no es un número, q lance un error
 
+function esNumero(valor) {
+    return !isNaN(valor) && valor !== null && valor !== true && valor !== false && valor !== '';
+}
