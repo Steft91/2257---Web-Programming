@@ -8,7 +8,7 @@
 
 const inventario = {
     producto1: {
-        nombre: "carne por lb",
+        nombre: "lb de carne",
         precio: 3.00,
         cantidad: 10
     },
@@ -60,43 +60,47 @@ function venderProducto(nombre, cantidad) {
 // Asegúrate de que los precios no sean negativos.
 
 function aplicarDescuento(porcentajeDesc) {
-    if (porcentajeDesc < 0) {
-      console.error("Error: El porcentaje de descuento no puede ser negativo.");
-      return;
+    if (typeof porcentajeDesc !== "number" || isNaN(porcentajeDesc)) {
+        console.error("Error: Debes proporcionar un porcentaje válido.");
+        return;
     }
-  
+
+    if (porcentajeDesc < 0) {
+        console.error("Error: El porcentaje de descuento no puede ser negativo.");
+        return; 
+    }
+
     for (let clave in inventario) {
-      let descuento = inventario[clave].precio * (porcentajeDesc / 100);
-      let nuevoPrecio = inventario[clave].precio - descuento;
-  
-      if (nuevoPrecio < 0) {
-        console.error(
-          `El descuento hace que el precio del producto "${inventario[clave].nombre}" sea negativo.`
-        );
-      } else {
-        inventario[clave].precio = nuevoPrecio;
-      }
+        let descuento = inventario[clave].precio * (porcentajeDesc / 100);
+        let nuevoPrecio = inventario[clave].precio - descuento;
+
+        if (nuevoPrecio < 0) {
+            console.error(
+                `El descuento hace que el precio del producto "${inventario[clave].nombre}" sea negativo.`
+            );
+        } else {
+            inventario[clave].precio = nuevoPrecio;
+        }
     }
     console.log(`El descuento es del ${porcentajeDesc}%.`);
-  }
+}
+
     
 
 // Usa las funciones creadas:
-
 // Vende algunos productos.
-
 // Aplica un descuento del 10% a todo el inventario.
-
 // Muestra el inventario final utilizando console.log().
 
 
-
 // Resultados esperados
-
-
-
 // Al vender productos: Se confirma la venta si hay stock suficiente o se muestra un mensaje de error.
-
 // Al aplicar el descuento: Los precios se reducen correctamente sin caer en valores negativos.
-
 // Estado final del inventario: Refleja los cambios en cantidades y precios después de las operaciones.
+
+venderProducto("lb de carne", 11); //Stock insuficiente
+venderProducto("cebolla", 10); //Venta exitosa
+
+aplicarDescuento(10);
+
+console.log("Inventario final:", inventario);
