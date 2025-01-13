@@ -81,16 +81,20 @@ class Venta {
     // ▪ Ventas realizadas con fecha y hora (utilizando objetos Date).
     // ▪ El total de ingresos generados y el producto más vendido.
     obtenerReporte() {
-        const totalIngresos = this.ventasRealizadas.reduce(
-            (total, venta) => total + venta.cantidad * venta.precio,
-            0
-        );
-        const productoMasVendido = this.ventasRealizadas.reduce((masVendido, venta) =>
-            !masVendido || venta.cantidad > masVendido.cantidad ? venta : masVendido,
-            null
-        );
+        let totalIngresos = 0;
+        let productoMasVendido = null;
+
+        for (let venta of this.ventasRealizadas) {
+            totalIngresos += venta.cantidad * venta.precio;
+
+            if (!productoMasVendido || venta.cantidad > productoMasVendido.cantidad) {
+                productoMasVendido = venta;
+            }
+        }
+
         return { totalIngresos, productoMasVendido };
     }
+
 }
 
 // Inicializar inventario y agregar productos.
@@ -134,3 +138,4 @@ console.log("Inventario actualizado:", inventario.productos);
 const reporte = ventas.obtenerReporte();
 console.log("Total de ingresos generados:", reporte.totalIngresos);
 console.log("Producto más vendido:", reporte.productoMasVendido);
+
