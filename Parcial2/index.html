@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #4b3066;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #6b3a8c; 
+        }
+
+        #botonPanel {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #botonPanel:hover {
+            background-color: #7d5698; /* Botón morado más oscuro al pasar el mouse */
+        }
+
+        #panel {
+            border: 2px solid #c1a1d3;
+            border-radius: 12px;
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 500px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 10px;
+            color: #4b3066;
+        }
+
+        input[type="text"], input[type="color"], textarea {
+            width: 100%;
+            margin-top: 5px;
+            padding: 8px;
+            font-size: 14px;
+            border: 1px solid #c1a1d3;
+            border-radius: 6px;
+        }
+
+        textarea:disabled {
+            background-color: #f4eaf5;
+        }
+
+        
+
+        .listaElemento {
+            color: #4b3066;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+    </style>
+</head>
+<body>
+  <h1 id="titulo">Título de la Página</h1>
+  <button id="botonPanel">Mostrar/Ocultar Panel</button>
+
+  <div id="panel">
+    <form id="formulario">
+      <label>
+        Cambiar Título:
+        <input type="text" id="tituloForm" placeholder="Nuevo título">
+      </label>
+      <br><br>
+      <label>
+        Cambiar Color de Fondo:
+        <input type="color" id="cambiarColor">
+      </label>
+      <br><br>
+      <label>
+        Comentarios:
+        <input type="checkbox" id="comentarios">
+      </label>
+    </form>
+    <textarea id="comentar" rows="4" cols="50" placeholder="Escribe tu comentario aquí..." disabled></textarea>
+  </div>
+
+  <h2>Lista de Elementos</h2>
+  <h5>Haga click en el elemento para eliminarlo</h5>
+  <ul id="lista">
+    <li class="listaElemento">Elemento 1</li>
+    <li class="listaElemento">Elemento 2</li>
+    <li class="listaElemento">Elemento 3</li>
+  </ul>
+
+  <script>
+    const togglePanelBtn = document.getElementById('botonPanel');
+    const configPanel = document.getElementById('panel');
+    togglePanelBtn.addEventListener('click', () => {
+      configPanel.style.display = configPanel.style.display === 'none' ? 'block' : 'none';     //  Panel
+
+    });
+
+    const ingresoTitulo = document.getElementById('tituloForm');
+    const tituloPagina = document.getElementById('titulo');
+    ingresoTitulo.addEventListener('input', (event) => {
+      tituloPagina.textContent = event.target.value || 'Título de la Página';     // Cambio del título
+
+    });
+
+    const inputColor = document.getElementById('cambiarColor');
+    inputColor.addEventListener('input', (event) => {
+      document.body.style.backgroundColor = event.target.value;     // Cambio del Fondo
+
+    });
+
+    const commentsCheckbox = document.getElementById('comentarios');
+    const commentArea = document.getElementById('comentar');
+    commentsCheckbox.addEventListener('change', (event) => {
+      commentArea.disabled = !event.target.checked;     // Comentarios
+
+    });
+
+    const itemList = document.getElementById('lista');
+    itemList.addEventListener('click', (event) => {
+      if (event.target.classList.contains('listaElemento')) {
+        event.target.remove();     // Eliminar elementos de la Lista
+
+      }
+    });
+  </script>
+</body>
+</html>
+

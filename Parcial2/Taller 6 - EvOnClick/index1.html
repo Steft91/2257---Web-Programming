@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de Eventos con DOM en JavaScript</title>
+</head>
+<body onload="entrar()">
+    <!-- Este evento se ejecuta cuando se termina de cargar la página -->
+
+    <form action="" method="get" id="formulario">
+        Apellido: <input type="text" id="apellido" >
+    </form>
+
+    <script>
+        let formulario = document.getElementById("formulario");
+
+        formulario.addEventListener("click", (event)=>{
+            evento.target.style.backgroundColor = "pink";            
+        }, true);
+
+        formulario.addEventListener("blur", (event)=>{
+            evento.target.style.backgroundColor = "";            
+        }, true);
+
+        formulario.addEventListener("click", (event)=>{
+            evento.target.style.backgroundColor = "pink";            
+        }, true);
+
+        formulario.addEventListener("blur", (event)=>{
+            evento.target.style.backgroundColor = "";            
+        }, true);
+
+    </script>
+
+    <!-- <h1 id="titulo">Evento addListener con funciones flecha</h1>
+    <br>
+    Nombre : <input type="text" id="nombre">
+    <br><br>
+    Apellido : <input type="text" id="apellido">
+    <br><br>
+    <script>
+        document.getElementById("nombre").addEventListener("click", (evento)=>{
+            evento.target.style.backgroundColor = "pink";
+        }); 
+        document.getElementById("nombre").addEventListener("blur", (evento)=> 
+            evento.target.style.backgroundColor = "white"); //Funcion de tipo callback, solo se hace la referencia
+
+        document.getElementById("apellido").addEventListener("click", (evento)=>{
+            evento.target.style.backgroundColor = "pink";
+        }); 
+        document.getElementById("apellido").addEventListener("blur", (evento)=> 
+            evento.target.style.backgroundColor = "white"); //Funcion de tipo callback, solo se hace la referencia
+
+        function cambiar(evento){
+            let componente = event.target;
+            componente.style.backgroundColor = "pink";
+        }
+        function regresar(evento){
+            let componente = event.target;
+            componente.style.backgroundColor = "white";
+        }
+
+    </script> -->
+
+    <!-- <h1 id="titulo">Evento addListener</h1>
+    <br>
+    Nombre : <input type="text" id="nombre">
+    <br><br>
+    Apellido : <input type="text" id="apellido">
+    <br><br>
+    <script>
+        document.getElementById("nombre").addEventListener("click", cambiar); //Funcion de tipo callback, solo se hace la referencia
+        document.getElementById("nombre").addEventListener("blur", regresar); //Funcion de tipo callback, solo se hace la referencia
+
+        function cambiar(evento){
+            let componente = event.target;
+            componente.style.backgroundColor = "pink";
+        }
+        function regresar(evento){
+            let componente = event.target;
+            componente.style.backgroundColor = "white";
+        }
+
+    </script> -->
+
+
+    <!-- <h1 id="titulo">Evento Onfocus y Onblur</h1>
+    <br>
+    Nombre : <input type="text" onfocus="cambiar(this)" onblur="regresar(this)">
+    <br><br>
+    Apellido : <input type="text" onfocus="cambiar(this)" onblur="regresar(this)">
+    <br><br>
+    <script>
+        function cambiar(elemento){
+            elemento.style.backgroundColor = "skyblue";
+        }
+        function regresar(elemento){
+            elemento.style.backgroundColor = "white";
+        }
+    </script> -->
+
+
+
+     <!-- <h1 id="titulo" onmousedown="rojo(this)" onmouseup="verde(this)" onclick="azul(this)">Evento Onmousedown</h1>
+     <br>
+
+     <script>
+        function rojo(elemento){
+            elemento.style.color = "red";
+        }
+        function verde(elemento){
+            elemento.style.color = "green";
+        }
+        function azul(elemento){
+            elemento.style.color = "blue";
+        }
+     </script> -->
+
+    <!-- Este evento se ejecuta cuando se termina de cargar la página -->
+
+    <!-- <h1 id="titulo"> Evento OnChange</h1>
+    <br>
+    Nombre : <input type="text" onchange="convertir(this)">
+    <script>
+
+        
+        function convertir(input) {
+            //let nombre = document.getElementById('nombre');
+            input.value = input.value.toUpperCase();
+        }
+    <script/> -->
+
+
+    <!-- Este evento se ejecuta cuando se termina de cargar la página  -->
+
+    <!-- <h1 id="titulo"> Evento OnLoad</h1>
+    <br>
+    <script>
+        function entrar(){
+            alert("Entrando a la página web")
+        }
+        //Manejo Cookies
+        //Son archivos que guardan informacion, cuando
+        //navegamos por la web
+        //validar un formato (llave, valor)
+        let texto = " ";
+        if(navigator.cookieEnabled){
+            texto = "Las cookies estan habilitadas";
+        }else{
+            texto = "Las cookies no estan habilitadas";
+        }
+        document.getElementById("Cookies").innerHTML =texto;
+    </script>  -->
+
+    <!-- <h1 id="titulo" onclick="cambiarTexto(this)">Evento Onclick()</h1>
+    <br>
+     <script>
+       document.getElementById('titulo').onclick = cambiarTexto;
+       //Estamos haciendo referencia, no estamos llamando a la funcion
+       // Esta funcion es de tipo callback
+       //De forma dinamica
+
+       function cambiarTexto(){
+        document.getElementById('titulo').innerHTML = 'Otro titulo';
+       }
+    </script>  -->
+</body>
+</html>
